@@ -149,11 +149,12 @@ syntax enable
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
+    colorscheme solarized
     set t_Co=256
 endif
 
 try
-    colorscheme desert
+    colorscheme solarized
 catch
 endtry
 
@@ -396,3 +397,9 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+
+noremap <silent> j gj
+onoremap <silent> k gk
+
+let g:used_javascript_libs = 'angularjs,angularui'
